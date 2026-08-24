@@ -45,7 +45,7 @@
   --maxw:1160px;
   --pad:clamp(20px,5vw,44px);
   --r:16px;
-  --bar:56px;            /* 상단 고정 바 높이 */
+  --bar:72px;            /* 상단 고정 바 높이 */
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -72,7 +72,7 @@ p,li{text-wrap:pretty}
 }
 .bar__in{max-width:var(--maxw);margin:0 auto;padding-inline:var(--pad);height:100%;
   display:flex;align-items:center;gap:18px}
-.bar__logo{height:24px;width:auto;flex:0 0 auto;opacity:.95}
+.bar__logo{height:44px;width:auto;flex:0 0 auto;opacity:.95}
 .bar__facts{display:flex;gap:20px;font-size:12.5px;color:var(--on-dark-dim);
   white-space:nowrap;overflow:hidden;flex:1}
 .bar__facts b{color:var(--on-dark);font-weight:700}
@@ -328,7 +328,7 @@ body[data-track] .ttabs{display:block}
 /* ── 푸터 ─────────────────────────────────── */
 .foot{padding:44px 0 calc(44px + env(safe-area-inset-bottom));background:#08090B;
   border-top:1px solid var(--line-d);font-size:12.5px;line-height:1.9;color:rgba(242,243,245,.42)}
-.foot img{height:38px;width:auto;margin-bottom:16px;opacity:.85}
+.foot img{height:54px;width:auto;margin-bottom:16px;opacity:.85}
 .foot b{color:rgba(242,243,245,.72);font-weight:700;display:block;margin-bottom:8px;font-size:14px}
 
 /* ── 모바일 고정 바 ───────────────────────── */
@@ -995,7 +995,7 @@ body[data-track] .ttabs{display:block}
     try{ history.replaceState(null, '', '?t=' + t); }catch(e){}
     if(scroll){
       var tr = document.getElementById('track');
-      var off = tr.getBoundingClientRect().top + window.scrollY - 124;
+      var off = tr.getBoundingClientRect().top + window.scrollY - 140;
       window.scrollTo({top: off, behavior: 'smooth'});
     }
   }
