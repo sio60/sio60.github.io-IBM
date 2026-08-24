@@ -340,8 +340,19 @@ body[data-track] .ttabs{display:block}
   background:linear-gradient(90deg,var(--bg) 6%,rgba(11,12,14,.82) 38%,rgba(11,12,14,.25) 78%)}
 .hero .wrap{position:relative;z-index:1}
 @media (max-width:760px){
-  .hero__art img{object-position:78% 50%;opacity:.55}
-  .hero__art::after{background:linear-gradient(180deg,rgba(11,12,14,.7),rgba(11,12,14,.92))}
+  /* 세로 화면에서는 그림이 좌우로 크게 잘린다. 두 레일이 합쳐지는
+     지점이 화면에 남도록 가로 위치를 잡고, 글자가 놓이는 위아래만
+     덮는다. 가운데 띠는 열어 둬야 그림이 보인다. */
+  .hero__art img{object-position:58% 46%;opacity:.9}
+  .hero__art::after{background:linear-gradient(180deg,
+    rgba(11,12,14,.95) 0%,
+    rgba(11,12,14,.88) 26%,
+    rgba(11,12,14,.44) 52%,
+    rgba(11,12,14,.74) 78%,
+    rgba(11,12,14,.95) 100%)}
+  /* 발표회도 세로에서는 사선 그라디언트가 그림을 다 먹는다 */
+  .punch__art::after{background:linear-gradient(180deg,
+    rgba(11,12,14,.94) 0%,rgba(11,12,14,.84) 38%,rgba(11,12,14,.45) 100%)}
 }
 
 /* ── 섹션 그림 띠 ───────────────────────── */
